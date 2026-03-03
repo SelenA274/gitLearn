@@ -7,7 +7,7 @@ import { sendVerificationEmail } from "../utils/mailer.js"
 dotenv.config()
 
 function generateCode() {
-    return Math.floor(100000 + Math.random() * 900000).toString();
+    return Math.floor(100000 + Math.random() * 900000).toString()
 }
 
 export const register = async (req, res) => {
@@ -77,7 +77,7 @@ export async function verifyEmail(req, res) {
         res.status(500).json({ error: "Something went wrong" });
     }
 }
-
+//comment
 export const login = async (req, res) => {
     try {
         const { email, password } = req.body
